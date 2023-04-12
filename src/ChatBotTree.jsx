@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export const ChatBotTree = (props) => {
   return (
     <div className="p-3 overflow-hidden">
