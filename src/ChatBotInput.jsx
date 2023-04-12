@@ -2,20 +2,23 @@ import React, { useState } from "react";
 import { AiOutlineSend } from "react-icons/ai";
 
 export const ChatBotInput = (props) => {
-    const [messageValue, setMessageValue] = useState("")
-    console.log(messageValue)
+  const [messageValue, setMessageValue] = useState("");
+  console.log(messageValue);
 
-    const handelSubmit = (e) => {
-        e.preventDefault()
-        props.setMessages(prev => [...prev, {isquestion: true, text: messageValue}])
-        setMessageValue('')
-    }
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    props.setMessages((prev) => [
+      ...prev,
+      { isquestion: true, text: messageValue },
+    ]);
+    setMessageValue("");
+  };
   return (
     <form className="d-flex p-3" onSubmit={handelSubmit}>
       <textarea
         className="border-0 bg-light fs-5 flex-fill"
         placeholder="Enter your message ..."
-        style={{resize: "none"}}
+        style={{ resize: "none" }}
         onChange={(e) => setMessageValue(e.target.value)}
         value={messageValue}
       />

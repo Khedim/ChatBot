@@ -1,9 +1,4 @@
-* {
-  /* border: 1px solid red; */
-}
 .App {
-  min-height: 5000px;
-  /* background-color: red; */
   text-align: center;
 }
 
@@ -19,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #fff;
+  background-color: #002346;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

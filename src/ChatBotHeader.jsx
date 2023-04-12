@@ -1,6 +1,6 @@
 import React from "react";
 import marie from "./assets/marie.png";
-import { RiCloseFill } from 'react-icons/ri'
+import { RiCloseFill } from "react-icons/ri";
 
 export const ChatBotHeader = (prop) => {
   return (
@@ -16,7 +16,10 @@ export const ChatBotHeader = (prop) => {
         <h4 className="p-0">Debbie</h4>
         <span className="p-0">connecting ...</span>
       </div>
-      <RiCloseFill className="x fs-4" onClick={() => prop.setShowChatBot(false)} />
+      <RiCloseFill
+        className="x fs-4"
+        onClick={() => prop.setShowChatBot(false)}
+      />
     </div>
   );
 };

@@ -5,19 +5,9 @@ import { ChatBotTree } from "./ChatBotTree";
 import { ChatBotInput } from "./ChatBotInput";
 
 export const ChatBot = () => {
-  const [showChatBot, setShowChatBot] = useState(true);
+  const [showChatBot, setShowChatBot] = useState(false);
   const [hovering, setHovering] = useState(false);
-  const [messages, setMessages] = useState([
-    { isQuestion: true, text: "bobosqidfho" },
-    { isQuestion: false, text: "oihgdsig" },
-    { isQuestion: true, text: "igudqsig" },
-    { isQuestion: true, text: "bobosqidfho" },
-    { isQuestion: false, text: "oihgdsig" },
-    { isQuestion: true, text: "t" },
-    { isQuestion: false, text: "bobosqidfhobobosqidfhobobosq idfhobobosqidfhob obosqidfhobobosqidfhob obosqidfho bobosqidfhobobosqidf hobobosqidfhobobosqidfhobobosqi dfhobobosqidfhob obosqidfho" },
-    { isQuestion: true, text: "oihgdsig" },
-    { isQuestion: true, text: "tt" },
-  ]);
+  const [messages, setMessages] = useState([]);
 
   return (
     <div
@@ -25,10 +15,15 @@ export const ChatBot = () => {
       className="position-fixed start-0 bottom-0 ms-sm-3 mb-sm-3"
     >
       {showChatBot ? (
-        <div id="chat-bot" className="bg-light rounded-5 overflow-hidden d-flex flex-column">
+        <div
+          id="chat-bot"
+          className="bg-light rounded-5 overflow-hidden d-flex flex-column"
+        >
           <div id="chatbot-header">
             <ChatBotHeader setShowChatBot={setShowChatBot} />
-            <p className="text-light text-start ps-4 position-relative">We're Online</p>
+            <p className="text-light text-start ps-4 position-relative">
+              We're Online
+            </p>
           </div>
           <div id="chatbot-tree" className="flex-fill overflow-auto">
             <ChatBotTree messages={messages} />
