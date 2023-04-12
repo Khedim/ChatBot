@@ -1,4 +1,9 @@
+* {
+  /* border: 1px solid red; */
+}
 .App {
+  min-height: 5000px;
+  /* background-color: red; */
   text-align: center;
 }
 
@@ -14,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +40,68 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#chatBot {
+  z-index: 9999999999999;
+}
+#chat-ball {
+  transition: 0.3s;
+  cursor: pointer;
+}
+#chat-bot {
+  width: 100vw;
+  max-width: 450px;
+  height: 100vh;
+  max-height: 600px;
+}
+#chatbot-header {
+  background-color: #2f303b;
+}
+#chatbot-header > p::after {
+  border-color: initial;
+  border-image-repeat: stretch;
+  border-image-slice: 0 0 100%;
+  border-image-source: url("./assets/wave.svg");
+  border-image-width: 0 0 15px;
+  border-style: none none solid;
+  border-width: 0 0 15px;
+  bottom: -23px;
+  content: "";
+  display: block;
+  left: 0;
+  margin-top: 10px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+.header-info p,
+.header-info h4,
+.header-info span {
+  margin: 0;
+  padding: 0;
+}
+.header-info h4 {
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+.header-info span {
+  font-size: 12px;
+  font-weight: bold;
+}
+.x {
+  cursor: pointer;
+}
+#chatbot-tree::-webkit-scrollbar {
+  width: 0;
+}
+#chatbot-tree p {
+  width: fit-content;
+  max-width: 90%;
+}
+textarea:focus {
+  outline: none;
+}
+textarea::-webkit-scrollbar {
+  width: 0;
 }
