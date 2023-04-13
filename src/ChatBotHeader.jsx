@@ -7,7 +7,7 @@ export const ChatBotHeader = (prop) => {
     <div className="d-flex align-items-center text-light p-3 ps-4 pe-4">
       <img
         src={marie}
-        alt="person"
+        alt="user"
         className="rounded-circle"
         style={{ width: "50px" }}
       />

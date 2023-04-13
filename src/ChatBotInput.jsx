@@ -3,7 +3,6 @@ import { AiOutlineSend } from "react-icons/ai";
 
 export const ChatBotInput = (props) => {
   const [messageValue, setMessageValue] = useState("");
-  console.log(messageValue);
 
   const handelSubmit = (e) => {
     e.preventDefault();

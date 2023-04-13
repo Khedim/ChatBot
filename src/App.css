@@ -1,18 +1,15 @@
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #002346;
   min-height: 100vh;
@@ -50,9 +47,20 @@
   height: 100vh;
   max-height: 600px;
 }
+input:focus {
+  box-shadow: 0 0 0 2px #2f303b !important;
+  border: 1px solid #2f303b !important;
+}
+.form-footer {
+  background-color: #2f303b;
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
 #chatbot-header {
   background-color: #2f303b;
 }
+.form-footer::after,
 #chatbot-header > p::after {
   border-color: initial;
   border-image-repeat: stretch;
@@ -61,14 +69,20 @@
   border-image-width: 0 0 15px;
   border-style: none none solid;
   border-width: 0 0 15px;
-  bottom: -23px;
   content: "";
   display: block;
   left: 0;
-  margin-top: 10px;
   position: absolute;
   right: 0;
   width: 100%;
+  top: -7px;
+}
+.form-footer::after {
+  top: -7px;
+}
+#chatbot-header > p::after {
+  margin-top: 10px;
+  bottom: -23px;
 }
 .header-info p,
 .header-info h4,
