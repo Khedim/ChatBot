@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { ChatBotHeader } from "./ChatBotHeader";
 import { ChatBotTree } from "./ChatBotTree";
 import { ChatBotInput } from "./ChatBotInput";
 
 export const ChatBot = (props) => {
-  const [messages, setMessages] = useState([]);
   return (
     <>
       <div id="chatbot-header">
@@ -14,10 +13,10 @@ export const ChatBot = (props) => {
         </p>
       </div>
       <div id="chatbot-tree" className="flex-fill overflow-auto">
-        <ChatBotTree messages={messages} />
+        <ChatBotTree messages={props.messages} />
       </div>
       <div id="chatbot-input">
-        <ChatBotInput setMessages={setMessages} />
+        <ChatBotInput setMessages={props.setMessages} />
       </div>
     </>
   );

@@ -7,6 +7,7 @@ import { ChatBotForm } from "./ChatBotForm";
 function App() {
   const [showChatBot, setShowChatBot] = useState(false);
   const [firstname, setFirstname] = useState("");
+  const [messages, setMessages] = useState([]);
 
   return (
     <div
@@ -27,7 +28,7 @@ function App() {
               setFirstname={setFirstname}
             />
           ) : (
-            <ChatBot setShowChatBot={setShowChatBot} />
+            <ChatBot setShowChatBot={setShowChatBot} messages={messages} setMessages={setMessages} />
           )}
         </div>
       ) : (
