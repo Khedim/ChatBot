@@ -10,10 +10,7 @@ export const ChatBotForm = (props) => {
     props.setFirstname(inputFirstname);
   };
   return (
-    <div
-      id="chat-bot"
-      className="bg-light rounded-5 overflow-hidden d-flex flex-column"
-    >
+    <>
       <div className="text-end p-2">
         <RiCloseFill
           className="x fs-4"
@@ -40,6 +37,6 @@ export const ChatBotForm = (props) => {
         <button className="btn btn-dark col-11">Submit</button>
       </form>
       <div className="form-footer"></div>
-    </div>
+    </>
   );
 };

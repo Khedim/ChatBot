@@ -6,10 +6,7 @@ import { ChatBotInput } from "./ChatBotInput";
 export const ChatBot = (props) => {
   const [messages, setMessages] = useState([]);
   return (
-    <div
-      id="chat-bot"
-      className="bg-light rounded-5 overflow-hidden d-flex flex-column"
-    >
+    <>
       <div id="chatbot-header">
         <ChatBotHeader setShowChatBot={props.setShowChatBot} />
         <p className="text-light text-start ps-4 position-relative">
@@ -22,6 +19,6 @@ export const ChatBot = (props) => {
       <div id="chatbot-input">
         <ChatBotInput setMessages={setMessages} />
       </div>
-    </div>
+    </>
   );
 };
